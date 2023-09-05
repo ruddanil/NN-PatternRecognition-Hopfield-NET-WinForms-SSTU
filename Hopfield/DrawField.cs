@@ -2,7 +2,6 @@
 
 namespace Hopfield
 {
-    // Класс области для рисования
     public class DrawField
     { 
         public const int Left = 104;
@@ -18,7 +17,7 @@ namespace Hopfield
             FillMatrixWith(-1);
         }
 
-        // Получение матрицы из нарисованного
+        // Getting the matrix from the drawn
         public Matrix GetMatrix()
         {
             Matrix copy = new Matrix(CellsCount, CellsCount);

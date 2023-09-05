@@ -3,7 +3,6 @@ using System.Drawing;
 
 namespace Hopfield
 {
-    // Класс для парсинга картинки
     public static class BitmapParser
     {
         public static Matrix Noise(Bitmap pic, int ammount)

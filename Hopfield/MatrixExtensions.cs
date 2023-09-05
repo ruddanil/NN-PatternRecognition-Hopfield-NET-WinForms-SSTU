@@ -5,10 +5,9 @@ using System.Drawing;
 
 namespace Hopfield
 {
-    // Класс для дополнительных действий над матрицами
     public static class MatrixExtensions
     {
-        // В вектор по столбцам
+        // Into a vector by columns
         public static Vector ToVectorByColumns(this Matrix m)
         {
             List<double> vector = new List<double>();
@@ -19,7 +18,7 @@ namespace Hopfield
             return new Vector(vector.ToArray());
         }
 
-        // В картинку
+        // Into the picture
         public static Bitmap ToBitmap(this Matrix m)
         {
             Bitmap pic = new Bitmap(width: m.ColumnCount, height: m.RowCount);

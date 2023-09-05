@@ -3,10 +3,9 @@ using System.Drawing;
 
 namespace Hopfield
 {
-    // Класс для расширения возможностей работы над картинкой
     public static class BitmapExtensions
     {
-        // Перевод картинки в матрицу
+        // Converting an image to a matrix
         public static Matrix ToMatrix(this Bitmap pic)
         {
             Matrix matrix = new Matrix(m: pic.Height, n: pic.Width);

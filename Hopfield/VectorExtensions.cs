@@ -6,10 +6,9 @@ using MathNet.Numerics.LinearAlgebra;
 
 namespace Hopfield
 {
-    // Класс для дополнительных действий над векторами
     public static class VectorExtensions
     {
-        // В матрицу по столбцам
+        // Into the matrix by columns
         public static Matrix ToMatrixByColumns(this Vector input, int columnSize)
         {
             int matrixSize = (int)Math.Sqrt(input.Length);

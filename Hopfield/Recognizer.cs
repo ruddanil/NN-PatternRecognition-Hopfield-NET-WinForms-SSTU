@@ -4,10 +4,9 @@ using MathNet.Numerics.LinearAlgebra;
 
 namespace Hopfield
 {
-    // Класс распознаватель
     public static class Recognizer
     {
-        // Создание матрицы весов
+        // Creating a weight matrix
         public static Matrix GenerateWeightsMatrix(Vector[] samples)
         {
             int samplesCount = samples.Length;
@@ -27,7 +26,7 @@ namespace Hopfield
             return weights;
         }
 
-        // Асинхронное распознавание
+        // Asynchronous recognition
         public static Matrix RecognizeAsynchronously(Matrix weights, Vector input)
         {
             Vector oldOutput = input.Clone();
@@ -36,7 +35,7 @@ namespace Hopfield
             {
                 for (int i = 0; i < input.Length; ++i)
                 {
-                    // биполярное кодирование
+                    // Bipolar coding
                     newOutput[i] = weights.GetRowVector(i).ArrayMultiply(newOutput).Sum() >= 0 ? +1 : -1;
                 }
                 if (newOutput.SequenceEqual(oldOutput))

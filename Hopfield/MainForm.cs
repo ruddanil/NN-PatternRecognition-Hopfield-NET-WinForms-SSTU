@@ -6,14 +6,14 @@ using MathNet.Numerics.LinearAlgebra;
 
 namespace Hopfield
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private Graphics _formGraphics;
         private bool _drawing;
         private readonly DrawField _drawField = new DrawField();
         private string[] _bitmapFilePaths = new string[5];
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }

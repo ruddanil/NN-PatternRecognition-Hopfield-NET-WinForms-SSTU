@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace Hopfield
 {
-    // Генератор случайного числа от даты и времени для зашумления
+    // Random number generator from date and time for noise
     public static class RandomGenerator
     {
         private static readonly Random Rand = new Random(DateTime.Now.Millisecond);
